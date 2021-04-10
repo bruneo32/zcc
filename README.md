@@ -29,7 +29,7 @@ Especial thanks to <a target="_blank" href="https://github.com/arf20">@arf20</a>
   <a href="https://github.com/bruneo32/zcc/tree/main/download/linux/v1.25/installer" id="download-any" class="button">
     <span>Download setup</span>
   </a>
-  <a href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/portable" id="download-tar-gz" class="button">
+  <a href="https://github.com/bruneo32/zcc/tree/main/download/linux/v1.25/portable" id="download-tar-gz" class="button">
     <span>Portable .tar.gz</span>
   </a>
 </section>
