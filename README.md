@@ -81,12 +81,12 @@ Example of a simple Boot sector in Z:
 }
 
 <span class="zl_word">#include</span> <span class="zl_string">"myfunctions.z"</span>
-<span class="zl_comment">// #include <math>
-/*
-  Multiline
-  comment
-*/
-  </span>
+<span class="zl_comment">// #include <math></span>
+<span class="zl_comment">/*</span>
+<span class="zl_comment">  Multiline</span>
+<span class="zl_comment">  comment</span>
+<span class="zl_comment">*/</span>
+  
 
 <span class="zl_word">buf</span>[510-($-$$)]
 <span class="zl_nasm_dir">db</span> 0x55,0xAA
