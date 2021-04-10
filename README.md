@@ -1,6 +1,8 @@
 <br>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.png?">
 <style>
+  header{display:none;}
+  
   #download-any{
     background: transparent url("https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Actions-go-down-icon.png") 12px 50% no-repeat;
   }
