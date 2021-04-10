@@ -39,7 +39,7 @@
 </style>
 
 # Get the last version of ZCC
-<br><code class="scode">version 1.25</code>
+<br><code class="scode">version 0.25</code>
 <br><br>
 
 ## Download for Windows
