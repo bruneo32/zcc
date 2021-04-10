@@ -1,4 +1,4 @@
-# a
+# ZCC Official site
 
 <br>
 ## Download for Windows
@@ -6,26 +6,22 @@
   <a href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/installer" id="download-setup" class="button">
     <span>Download setup</span>
   </a>
-  <br>
   <a href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/portable" id="download-zip" class="button">
     <span>Portable .zip</span>
   </a>
-  <br>
 </section>
 
 ## Download for Linux
 Especial thanks to @arf20
 <section id="downloads" class="clearfix">
-  <span>apt install zcc</span>
+  <strong>apt install zcc</strong>
   <br>
   <a href="https://github.com/bruneo32/zcc/tree/main/download/linux/v1.25/installer" id="download-exe" class="button">
     <span>Download setup</span>
   </a>
-  <br>
   <a href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/portable" id="download-zip" class="button">
     <span>Portable .tar.gz</span>
   </a>
-  <br>
 </section>
 
 
