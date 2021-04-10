@@ -5,6 +5,9 @@
   #download-any{
     background: transparent url("https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Actions-go-down-icon.png") 12px 50% no-repeat;
   }
+  #download-zip, #download-tar-gz {
+    display: block;
+  }
 </style>
 ## Download for Windows
 <section id="downloads" class="clearfix">
