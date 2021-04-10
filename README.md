@@ -13,7 +13,7 @@
   .scode{
     font-size:1.25em;
     padding:6px 12px;
-    margin:32px 12px;
+    margin:auto 32px;
   }
   
   .zl_word{
@@ -39,7 +39,7 @@
 </style>
 
 # Get the last version of ZCC
-<code class="scode">version 1.25</code>
+<br><code class="scode">version 1.25</code>
 
 ## Download for Windows
 <section id="downloads" class="clearfix">
