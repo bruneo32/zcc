@@ -11,6 +11,7 @@
   }
 </style>
 
+# Get the last version of ZCC
 ## Download for Windows
 <section id="downloads" class="clearfix">
   <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/installer" id="download-any" class="button">
@@ -34,19 +35,38 @@ Especial thanks to <a target="_blank" href="https://github.com/arf20">@arf20</a>
   </a>
 </section>
 
+# Z language
+Z is a programming language which extends Assembly to a
 
-You `can` use the [editor on GitHub](https://github.com/bruneo32/zcc/edit/webpage/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+### Syntax
+Example of a simple Boot sector in Z:
 ```
-function (){
-  
+org 0x7c00
+bits 16
+
+callf printStr(str_hello)
+
+cli
+hlt
+
+def str_hello = "Hello world!",0
+
+function printStr(si){
+  while ($si != 0){
+    callf printChar(word $si)
+    si++
+  }
 }
+
+#include "myfunctions.z"
+// #include <math>
+/*
+  Multiline
+  comment
+*/
+
+buf[510-($-$$)]
+db 0x55,0xAA
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+&copy; 2021
