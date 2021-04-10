@@ -24,7 +24,7 @@
 ## Download for Linux
 Especial thanks to <a target="_blank" href="https://github.com/arf20">@arf20</a>
 <section id="downloads" class="clearfix">
-  &ensp;&ensp;<code><h2>apt install zcc</h2></code>
+  &ensp;&ensp;<code style="font-size:2em;">apt install zcc</code>
   <br><br>
   <a href="https://github.com/bruneo32/zcc/tree/main/download/linux/v1.25/installer" id="download-any" class="button">
     <span>Download setup</span>
