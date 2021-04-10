@@ -1,28 +1,29 @@
-## Welcome to GitHub Pages
-
 <br>
 ## Download for Windows
 <section id="downloads" class="clearfix">
-  <a href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/installer" id="download-exe" class="button">
+  <a href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/installer" id="download-setup" class="button">
     <span>Download setup</span>
   </a>
+  <br>
   <a href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/portable" id="download-zip" class="button">
     <span>Portable .zip</span>
   </a>
+  <br>
 </section>
 
 ## Download for Linux
 Especial thanks to @arf20
 <section id="downloads" class="clearfix">
-  <a href="#" id="" class="button">
-    <span>apt install zcc</span>
-  </a>
+  <span>apt install zcc</span>
+  <br>
   <a href="https://github.com/bruneo32/zcc/tree/main/download/linux/v1.25/installer" id="download-exe" class="button">
     <span>Download setup</span>
   </a>
+  <br>
   <a href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/portable" id="download-zip" class="button">
     <span>Portable .tar.gz</span>
   </a>
+  <br>
 </section>
 
 
