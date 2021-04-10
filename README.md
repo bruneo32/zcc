@@ -14,8 +14,8 @@
 ## Download for Linux
 Especial thanks to @arf20
 <section id="downloads" class="clearfix">
-  <code>apt install zcc</code>
-  <br>
+  &ensp;&ensp;<code>apt install zcc</code>
+  <br><br>
   <a href="https://github.com/bruneo32/zcc/tree/main/download/linux/v1.25/installer" id="download-exe" class="button">
     <span>Download setup</span>
   </a>
