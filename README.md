@@ -33,6 +33,7 @@
 </style>
 
 # Get the last version of ZCC
+<br>
 ## Download for Windows
 <section id="downloads" class="clearfix">
   <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/installer" id="download-any" class="button">
