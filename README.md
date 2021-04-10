@@ -26,13 +26,13 @@
     color:darkgreen;
   }
   .zl_inmed{
-    color:red;
+    color:alice;
   }
   .zl_nasm_dir{
     color:aqua;
   }
   .zl_nasm_inst{
-    color:blue;
+    color:lightblue;
     font-weight:bold;
   }
 </style>
@@ -81,7 +81,7 @@ Example of a simple Boot sector in Z:
 
 <span class="zl_word">function</span> printStr(si){
   <span class="zl_word">while</span> (<span class="zl_inmed">$si</span> != 0){
-    <span class="zl_word">callk</span> printChar(<span class="zl_nasm_inst">word</span> $si)
+    <span class="zl_word">callk</span> printChar(<span class="zl_nasm_inst">word</span> <span class="zl_inmed">$si</span>)
     si++
   }
 }
