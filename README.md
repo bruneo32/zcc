@@ -1,4 +1,4 @@
-# b
+# ZCC Official site
 
 <br>
 ## Download for Windows
@@ -14,7 +14,7 @@
 ## Download for Linux
 Especial thanks to @arf20
 <section id="downloads" class="clearfix">
-  <strong>apt install zcc</strong>
+  <center>`apt install zc`</center>
   <br>
   <a href="https://github.com/bruneo32/zcc/tree/main/download/linux/v1.25/installer" id="download-exe" class="button">
     <span>Download setup</span>
