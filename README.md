@@ -13,7 +13,7 @@
   .scode{
     font-size:1.25em;
     padding:6px 12px;
-    margin:32px 3px;
+    margin:32px 12px;
   }
   
   .zl_word{
