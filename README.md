@@ -1,6 +1,7 @@
 ## Welcome to GitHub Pages
 
-# Download for Windows
+<br>
+## Download for Windows
 <section id="downloads" class="clearfix">
   <a href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/installer" id="download-exe" class="button">
     <span>Download setup</span>
@@ -10,7 +11,7 @@
   </a>
 </section>
 
-# Download for Linux
+## Download for Linux
 Especial thanks to @arf20
 <section id="downloads" class="clearfix">
   <a href="#" id="" class="button">
