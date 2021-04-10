@@ -102,7 +102,7 @@ Example of a simple Boot sector in Z:
 ![]()
 
 <br>
-Messy Hello world windows executable:
+Example of a little messy "Hello world!" windows executable:
 <pre>
 <span class="zl_nasm_dir">extern</span> _printf
 <span class="zl_nasm_dir">global</span> _main
