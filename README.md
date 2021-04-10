@@ -120,7 +120,7 @@ Example of a little messy "Hello world!" windows executable:
 <span class="zl_word">def</span> str_hello = <span class="zl_string">"Hello, world!"</span>,10,0
 
 <span class="zl_word">function</span> printstr(<span class="zl_nasm_inst">dword</span> esi){
-	<span class="zl_nasm_inst">push</span> esi
-	<span class="zl_nasm_inst">call</span> _printf
+  <span class="zl_nasm_inst">push</span> esi
+  <span class="zl_nasm_inst">call</span> _printf
 }
 </pre>
