@@ -10,6 +10,11 @@
     display: block;
   }
   
+  .scode{
+    font-size:1.25em;
+    padding:6px 12px;
+  }
+  
   .zl_word{
     color:orangered;
     font-weight:bold;
@@ -33,7 +38,8 @@
 </style>
 
 # Get the last version of ZCC
-<br>
+<code class="scode">version 1.25</code>
+
 ## Download for Windows
 <section id="downloads" class="clearfix">
   <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/installer" id="download-any" class="button">
@@ -47,7 +53,7 @@
 ## Download for Linux
 Especial thanks to <a target="_blank" href="https://github.com/arf20">@arf20</a>
 <section id="downloads" class="clearfix">
-  &ensp;&ensp;&ensp;<code style="font-size:1.25em;padding:6px 12px;">apt install zcc</code>
+  <code class="scode">apt install zcc</code>
   <br><br>
   <a href="https://github.com/bruneo32/zcc/tree/main/download/linux/v1.25/installer" id="download-any" class="button">
     <span>Download deb</span>
@@ -81,11 +87,11 @@ Example of a simple Boot sector in Z:
 }
 
 <span class="zl_word">#include</span> <span class="zl_string">"myfunctions.z"</span>
-<span class="zl_comment">// #include <math></span>
-<span class="zl_comment">/*</span>
-<span class="zl_comment">  Multiline</span>
-<span class="zl_comment">  comment</span>
-<span class="zl_comment">*/</span>
+<span class="zl_comment">// #include &lt;math&gt;
+/*
+  Multiline
+  comment
+*/</span>
   
 
 <span class="zl_word">buf</span>[510-($-$$)]
