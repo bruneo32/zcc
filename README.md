@@ -99,7 +99,7 @@ Example of a simple Boot sector in Z:
 <span class="zl_word">buf</span>[510-($-$$)]
 <span class="zl_nasm_dir">db</span> 0x55,0xAA
 </pre>
-![]()
+![](example_boot.png)
 
 <br>
 Example of a little messy "Hello world!" windows executable:
@@ -111,9 +111,9 @@ Example of a little messy "Hello world!" windows executable:
 
 <span class="zl_nasm_dir">section</span> .text
 <span class="zl_word">function</span> _main(){
-	ax^ax <span class="zl_comment">// XOR</span>
+  ax^ax <span class="zl_comment">// XOR</span>
 	
-	<span class="zl_word">callf</span> printstr(<span class="zl_nasm_inst">dword</span> str_hello)
+  <span class="zl_word">callf</span> printstr(<span class="zl_nasm_inst">dword</span> str_hello)
 }
 
 <span class="zl_nasm_dir">section</span> .data
@@ -124,3 +124,4 @@ Example of a little messy "Hello world!" windows executable:
   <span class="zl_nasm_inst">call</span> _printf
 }
 </pre>
+![](example_helloworld.png)
