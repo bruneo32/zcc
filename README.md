@@ -1,7 +1,7 @@
 <br>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.png?">
 <style>
-  header{display:none;}
+  header,section.downloads,div.inner hr:first-child{display:none;}
   
   #download-any{
     background: transparent url("https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Actions-go-down-icon.png") 12px 50% no-repeat;
@@ -43,18 +43,18 @@
 <br><br>
 
 ## Download for Windows
-<section id="downloads" class="clearfix">
+<div id="downloads" class="clearfix">
   <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/installer" id="download-any" class="button">
     <span>Download setup</span>
   </a>
   <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/portable" id="download-zip" class="button">
     <span>Portable .zip</span>
   </a>
-</section>
+</div>
 
 ## Download for Linux
 Especial thanks to <a target="_blank" href="https://github.com/arf20">@arf20</a>
-<section id="downloads" class="clearfix">
+<div id="downloads" class="clearfix">
   <code class="scode">apt install zcc</code>
   <br><br>
   <a href="https://github.com/bruneo32/zcc/tree/main/download/linux/v1.25/installer" id="download-any" class="button">
@@ -63,7 +63,7 @@ Especial thanks to <a target="_blank" href="https://github.com/arf20">@arf20</a>
   <a href="https://github.com/bruneo32/zcc/tree/main/download/linux/v1.25/portable" id="download-tar-gz" class="button">
     <span>Portable .tar.gz</span>
   </a>
-</section>
+</div>
 
 # Z language
 Z is a programming language which extends Assembly to a
