@@ -9,6 +9,27 @@
   #download-zip, #download-tar-gz {
     display: block;
   }
+  
+  .zl_word{
+    color:darkred;
+    font-weight:bold;
+  }
+  .zl_string{
+    color:cadetblue;
+  }
+  .zl_comment{
+    color:darkgreen;
+  }
+  .zl_inmed{
+    color:red;
+  }
+  .zl_nasm_dir{
+    color:aqua;
+  }
+  .zl_nasm_inst{
+    color:blue;
+    font-weight:bold;
+  }
 </style>
 
 # Get the last version of ZCC
@@ -40,31 +61,31 @@ Z is a programming language which extends Assembly to a
 
 ### Syntax
 Example of a simple Boot sector in Z:
-```
-org 0x7c00
-bits 16
+<pre>
+<span class="zl_nasm_dir">org</span> 0x7c00
+<span class="zl_nasm_dir">bits</span> 16
 
-callf printStr(str_hello)
+<span class="zl_word">callf</span> printStr(str_hello)
 
-cli
-hlt
+<span class="zl_nasm_inst">cli</span>
+<span class="zl_nasm_inst">hlt</span>
 
-def str_hello = "Hello world!",0
+<span class="zl_word">def</span> str_hello = <span class="zl_string">"Hello world!"</span>,0
 
-function printStr(si){
-  while ($si != 0){
-    callf printChar(word $si)
+<span class="zl_word">function</span> printStr(si){
+  <span class="zl_word">while</span> (<span class="zl_inmed">$si</span> != 0){
+    <span class="zl_word">callk</span> printChar(<span class="zl_nasm_inst">word</span> $si)
     si++
   }
 }
 
-#include "myfunctions.z"
-// #include <math>
+<span class="zl_word">#include</span> <span class="zl_string">"myfunctions.z"</span>
+<span class="zl_comment">// #include <math>
 /*
   Multiline
   comment
-*/
+*/</span>
 
-buf[510-($-$$)]
-db 0x55,0xAA
-```
+<span class="zl_word">buf</span>[510-($-$$)]
+<span class="zl_nasm_dir">db</span> 0x55,0xAA
+</pre>
