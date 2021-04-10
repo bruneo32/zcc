@@ -3,7 +3,7 @@
 <br>
 <style>
   #download-any{
-    background: transparent url("https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/48/Actions-go-down-icon.png") 12px 50% no-repeat;
+    background: transparent url("https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/24/Actions-go-down-icon.png") 12px 50% no-repeat;
   }
 </style>
 ## Download for Windows
