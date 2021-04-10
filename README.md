@@ -1,4 +1,4 @@
-<span></span>
+<span>a</span>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.png?">
 <style>
   header,section#downloads,div.inner>hr{display:none;}
