@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
-<a target="_blank" href="https://github.com/bruneo32/zcc/" id="download-zip">Windows</a>
+<a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25" id="download-zip">Windows</a>
 
 You can use the [editor on GitHub](https://github.com/bruneo32/zcc/edit/webpage/README.md) to maintain and preview the content for your website in Markdown files.
 
