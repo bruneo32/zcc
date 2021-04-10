@@ -2,6 +2,13 @@
 
 <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25" id="download-zip">Windows</a>
 
+
+<br><hr>
+<p align="center">
+  <a target="_blank" href="https://www.retronomicon.gq/phpmiami"><img src="/res/banner.jpg" alt=""></a> &ensp; 
+  <a target="_blank" href="https://codemirror.net"><img src="/res/codemirror.png" alt=""></a>
+</p>
+
 You can use the [editor on GitHub](https://github.com/bruneo32/zcc/edit/webpage/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
