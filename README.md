@@ -3,7 +3,7 @@
 <br>
 ## Download for Windows
 <section id="downloads" class="clearfix">
-  <a href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/installer" id="download-x" class="button">
+  <a href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/installer" id="vnd.microsoft.portable-executable" class="button">
     <span>Download setup</span>
   </a>
   <a href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/portable" id="download-zip" class="button">
