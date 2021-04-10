@@ -104,23 +104,23 @@ Example of a simple Boot sector in Z:
 
 Messy Hello world windows executable:
 <pre>
-<span class="zl_nasm_dir">extern</span> \_printf
-<span class="zl_nasm_dir">global</span> \_main
+<span class="zl_nasm_dir">extern</span> _printf
+<span class="zl_nasm_dir">global</span> _main
 
 <span class="zl_nasm_dir">bits</span> 32
 
-<span class="zl_nasm_dir">section</span> \.text
-<span class="zl_word">function</span> \_main(){
+<span class="zl_nasm_dir">section</span> .text
+<span class="zl_word">function</span> _main(){
 	ax\^ax
 	
 	<span class="zl_word">callf</span> printstr(<span class="zl_nasm_inst">dword</span> str_hello)
 }
 
-<span class="zl_nasm_dir">section</span> \.data
+<span class="zl_nasm_dir">section</span> .data
 <span class="zl_word">def</span> str_hello = <span class="zl_string">"Hello, world!"</span>,10,0
 
 <span class="zl_word">function</span> printstr(<span class="zl_nasm_inst">dword</span> esi){
 	<span class="zl_nasm_inst">push</span> esi
-	<span class="zl_nasm_inst">call</span> \_printf
+	<span class="zl_nasm_inst">call</span> _printf
 }
 </pre>
