@@ -1,6 +1,5 @@
 ## Welcome to GitHub Pages
 
-<br><hr>
 <section id="downloads" class="clearfix">
   <a href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25" id="download-zip" class="button">
     <span>Download .zip</span>
