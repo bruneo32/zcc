@@ -11,7 +11,7 @@
   }
   
   .zl_word{
-    color:darkred;
+    color:orangered;
     font-weight:bold;
   }
   .zl_string{
@@ -85,7 +85,8 @@ Example of a simple Boot sector in Z:
 /*
   Multiline
   comment
-*/</span>
+*/
+  </span>
 
 <span class="zl_word">buf</span>[510-($-$$)]
 <span class="zl_nasm_dir">db</span> 0x55,0xAA
