@@ -38,7 +38,7 @@
 
 # Get the last version of ZCC
 <br><code class="scode">version 1.25</code>
-<br>
+<br><br>
 
 ## Download for Windows
 <section id="downloads" class="clearfix">
