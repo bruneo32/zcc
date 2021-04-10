@@ -27,13 +27,13 @@
     color:darkgreen;
   }
   .zl_inmed{
-    color:alice;
+    color:gold;
   }
   .zl_nasm_dir{
     color:aqua;
   }
   .zl_nasm_inst{
-    color:lightblue;
+    color:dodgerblue;
     font-weight:bold;
   }
 </style>
