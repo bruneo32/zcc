@@ -1,12 +1,11 @@
-@import "{{ site.theme }}";
-# ZCC Official site
 
+# ZCC Official site
 <br>
 <style>
   #download-any{
     background: transparent url("https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/128/Actions-go-down-icon.png") 12px 50% no-repeat;
   }
- </style>
+</style>
 ## Download for Windows
 <section id="downloads" class="clearfix">
   <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/installer" id="download-any" class="button">
