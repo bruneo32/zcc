@@ -9,6 +9,7 @@
     display: block;
   }
 </style>
+
 ## Download for Windows
 <section id="downloads" class="clearfix">
   <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/installer" id="download-any" class="button">
@@ -20,9 +21,9 @@
 </section>
 
 ## Download for Linux
-Especial thanks to @arf20
+Especial thanks to <a target="_blank" href="https://github.com/arf20">@arf20</a>
 <section id="downloads" class="clearfix">
-  &ensp;&ensp;<code>apt install zcc</code>
+  &ensp;&ensp;<code><h2>apt install zcc</h2></code>
   <br><br>
   <a href="https://github.com/bruneo32/zcc/tree/main/download/linux/v1.25/installer" id="download-any" class="button">
     <span>Download setup</span>
