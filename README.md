@@ -44,10 +44,10 @@
 
 ## Download for Windows
 <div id="downloads" class="clearfix">
-  <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/installer" id="download-any" class="button">
-    <span>Download setup</span>
+  <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/windows/installer" id="download-any" class="button">
+    <span>Download Setup</span>
   </a>
-  <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25/portable" id="download-zip" class="button">
+  <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/windows/zip" id="download-zip" class="button">
     <span>Portable .zip</span>
   </a>
 </div>
@@ -57,11 +57,11 @@ Especial thanks to <a target="_blank" href="https://github.com/arf20">@arf20</a>
 <div id="downloads" class="clearfix">
   <code class="scode">apt install zcc</code>
   <br><br>
-  <a href="https://github.com/bruneo32/zcc/tree/main/download/linux/v1.25/installer" id="download-any" class="button">
-    <span>Download deb</span>
+  <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/linux/deb" id="download-any" class="button">
+    <span>Download Deb package</span>
   </a>
-  <a href="https://github.com/bruneo32/zcc/tree/main/download/linux/v1.25/portable" id="download-tar-gz" class="button">
-    <span>Portable .tar.gz</span>
+  <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/linux/targz" id="download-zip" class="button">
+    <span>Portable .zip</span>
   </a>
 </div>
 
