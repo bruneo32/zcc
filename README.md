@@ -68,5 +68,3 @@ function printStr(si){
 buf[510-($-$$)]
 db 0x55,0xAA
 ```
-
-&copy; 2021
