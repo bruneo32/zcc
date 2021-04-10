@@ -1,13 +1,14 @@
 ## Welcome to GitHub Pages
 
-<a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25" id="download-zip">Windows</a>
-
-
 <br><hr>
-<p align="center">
-  <a target="_blank" href="https://www.retronomicon.gq/phpmiami"><img src="/res/banner.jpg" alt=""></a> &ensp; 
-  <a target="_blank" href="https://codemirror.net"><img src="/res/codemirror.png" alt=""></a>
-</p>
+<section id="downloads" class="clearfix">
+  <a href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25" id="download-zip" class="button">
+    <span>Download .zip</span>
+  </a>
+  <a href="https://github.com/bruneo32/zcc/tree/main/download/windows/v1.25" id="download-tar-gz" class="button">
+    <span>Download .tar.gz</span>
+  </a>
+</section>
 
 You can use the [editor on GitHub](https://github.com/bruneo32/zcc/edit/webpage/README.md) to maintain and preview the content for your website in Markdown files.
 
