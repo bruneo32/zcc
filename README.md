@@ -107,12 +107,12 @@ Example of a simple Boot sector in Z:
 <br>
 Example of a little messy "Hello world!" executable
 <pre>
-<span class="zl_nasm_dir">global</span> _main
+<span class="zl_nasm_dir">global</span> _start
 
 <span class="zl_nasm_dir">bits</span> 32
 
 <span class="zl_nasm_dir">section</span> .text
-_main:
+_start:
   <span class="zl_word">for</span>(cx=0, cx<5, cx++){
     <span class="zl_word">callf</span> printstr(str_hello)
   }
@@ -136,6 +136,4 @@ Linux:
 `zcc main.z main.asm -nasm:{-f elf32 main.o} -link:{main.o -o progra -melf_i386}`
 
 ![](example_helloworld2.png)
-
-`Note: compiling elf requires entry point "_start" instead of "_main"`
 
