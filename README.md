@@ -107,7 +107,6 @@ Example of a simple Boot sector in Z:
 <br>
 Example of a little messy "Hello world!" windows executable:
 <pre>
-<span class="zl_nasm_dir">extern</span> _printf
 <span class="zl_nasm_dir">global</span> _main
 
 <span class="zl_nasm_dir">bits</span> 32
@@ -118,8 +117,7 @@ Example of a little messy "Hello world!" windows executable:
     <span class="zl_word">callf</span> printstr(str_hello)
   }
   
-  <span class="zl_nasm_inst">add</span> <span class="zl_inmed">_z_sp</span>, 4
-  <span class="zl_nasm_inst">ret</span>
+  <span class="zl_word">callk</span> end0()
 
 <span class="zl_nasm_dir">section</span> .data
 <span class="zl_word">def</span> str_hello = <span class="zl_string">"Hello, world!"</span>,10,0
@@ -130,3 +128,8 @@ Example of a little messy "Hello world!" windows executable:
 `zcc main.z main.asm -nasm:{-f win32 main.o} -link:{main.o -o prog.exe}`
 
 ![](example_helloworld.png)
+
+`zcc main.z main.asm -nasm:{-f elf32 main.o} -link:{main.o -o prog.exe -melf_i386}`
+
+![](example_helloworld2.png)
+`Note: compiling elf32 requires entry point "_start" instead of "_main"`
