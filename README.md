@@ -113,10 +113,13 @@ Example of a little messy "Hello world!" windows executable:
 <span class="zl_nasm_dir">bits</span> 32
 
 <span class="zl_nasm_dir">section</span> .text
-<span class="zl_word">function</span> _main(){
-  for()
-  <span class="zl_word">callf</span> printstr(<span class="zl_nasm_inst">dword</span> str_hello)
-}
+ _main:
+  <span class="zl_word">for</span>(cx=0, cx<5, cx++){
+    <span class="zl_word">callf</span> printstr(<span class="zl_nasm_inst">dword</span> str_hello)
+  }
+  
+  <span class="zl_nasm_inst">add</span> <span class="zl_inmed">_z_sp</span>, 4
+  <span class="zl_nasm_inst">ret</span>
 
 <span class="zl_nasm_dir">section</span> .data
 <span class="zl_word">def</span> str_hello = <span class="zl_string">"Hello, world!"</span>,10,0
