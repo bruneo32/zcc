@@ -100,7 +100,7 @@ Example of a simple Boot sector in Z:
 <span class="zl_nasm_dir">db</span> 0x55,0xAA
 </pre>
 
-`zcc main.z main.asm -nasm:"-f bin main.flp"`
+`zcc main.z main.asm -nasm:-f bin main.flp`
 
 ![](example_boot.png)
 
@@ -127,6 +127,6 @@ Example of a little messy "Hello world!" windows executable:
 }
 </pre>
 
-`zcc main.z main.asm -nasm:"-f win32 main.o" -link:"main.o -o prog.exe`
+`zcc main.z main.asm -nasm:-f win32 main.o -link:"main.o -o prog.exe`
 
 ![](example_helloworld.png)
