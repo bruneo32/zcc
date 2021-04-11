@@ -60,8 +60,8 @@ Especial thanks to <a target="_blank" href="https://github.com/arf20">@arf20</a>
   <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/linux/deb" id="download-any" class="button">
     <span>Download Deb</span>
   </a>
-  <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/linux/targz" id="download-zip" class="button">
-    <span>Portable .zip</span>
+  <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/linux/targz" id="download-tar-gz" class="button">
+    <span>Portable .tar.gz</span>
   </a>
 </div>
 
