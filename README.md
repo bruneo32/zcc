@@ -147,6 +147,6 @@ Linux:
 
 Windows:
 
-`zcc main.z main.asm -nasm:{-f win32 main.o} -link:{main.o -o prog.exe}`
+`zcc main.z main.asm -nasm:{-f win32 main.o} -alink:{main.o -o prog.exe}`
 
 ![](example_helloworld.png)
