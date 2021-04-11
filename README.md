@@ -6,7 +6,7 @@
   #download-any{
     background: transparent url("https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Actions-go-down-icon.png") 12px 50% no-repeat;
   }
-  #download-any{
+  #download-npp{
     background: transparent url("https://notepad-plus-plus.org/images/logo.svg") 12px 50% no-repeat;
   }
   #download-zip, #download-tar-gz {
