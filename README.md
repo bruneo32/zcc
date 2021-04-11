@@ -71,8 +71,6 @@ Especial thanks to <a target="_blank" href="https://github.com/arf20">@arf20</a>
 ## Extras
 
 <div id="downloads" class="clearfix">
-  <code class="scode">apt install zcc</code>
-  <br><br>
   <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/source" id="download-any" class="button">
     <span>Source code</span>
   </a>
