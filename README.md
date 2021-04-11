@@ -83,7 +83,7 @@ Especial thanks to <a target="_blank" href="https://github.com/arf20">@arf20</a>
 Z is a programming language which extends Assembly to a
 
 ### Examples
-Example of a simple Boot sector in Z:
+Example of a simple BOOT sector in Z
 <pre>
 <span class="zl_nasm_dir">org</span> 0x7c00
 <span class="zl_nasm_dir">bits</span> 16
@@ -119,7 +119,7 @@ Example of a simple Boot sector in Z:
 ![](example_boot.png)
 
 <br>
-Example of a "Hello world!" executable
+Example of a "Hello world!" executable in Z
 <pre>
 <span class="zl_nasm_dir">global</span> _start
 
