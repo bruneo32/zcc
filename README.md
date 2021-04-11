@@ -71,7 +71,7 @@ Especial thanks to <a target="_blank" href="https://github.com/arf20">@arf20</a>
 ## Extras
 
 <div id="downloads" class="clearfix">
-  <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/source" id="download-any" class="button">
+  <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/source" id="download-any" class="button">
     <span>Source code</span>
   </a>
   <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/extra" id="download-npp" class="button">
