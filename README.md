@@ -106,7 +106,6 @@ Example of a simple Boot sector in Z:
 
 <br>
 Example of a little messy "Hello world!" executable
-Windows:
 <pre>
 <span class="zl_nasm_dir">global</span> _main
 
@@ -125,6 +124,8 @@ _main:
 
 <span class="zl_word">#include</span> <span class="zl_string">&lt;stdio&gt;</span>
 </pre>
+
+Windows:
 
 `zcc main.z main.asm -nasm:{-f win32 main.o} -link:{main.o -o prog.exe}`
 
