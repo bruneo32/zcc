@@ -133,7 +133,7 @@ Windows:
 
 Linux:
 
-`zcc main.z main.asm -nasm:{-f elf32 main.o} -link:{main.o -o proga -melf_i386}`
+`zcc main.z main.asm -nasm:{-f elf32 main.o} -link:{main.o -o progra -melf_i386}`
 
 ![](example_helloworld2.png)
 
