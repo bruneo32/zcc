@@ -6,6 +6,9 @@
   #download-any{
     background: transparent url("https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Actions-go-down-icon.png") 12px 50% no-repeat;
   }
+  #download-any{
+    background: transparent url("https://notepad-plus-plus.org/images/logo.svg") 12px 50% no-repeat;
+  }
   #download-zip, #download-tar-gz {
     display: block;
   }
@@ -62,6 +65,19 @@ Especial thanks to <a target="_blank" href="https://github.com/arf20">@arf20</a>
   </a>
   <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/linux/targz" id="download-tar-gz" class="button">
     <span>Portable .tar.gz</span>
+  </a>
+</div>
+
+## Extras
+
+<div id="downloads" class="clearfix">
+  <code class="scode">apt install zcc</code>
+  <br><br>
+  <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/source" id="download-any" class="button">
+    <span>Source code</span>
+  </a>
+  <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/extra" id="download-npp" class="button">
+    <span>Notepad++ UDL</span>
   </a>
 </div>
 
