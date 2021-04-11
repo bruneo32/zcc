@@ -124,10 +124,7 @@ Example of a little messy "Hello world!" windows executable:
 <span class="zl_nasm_dir">section</span> .data
 <span class="zl_word">def</span> str_hello = <span class="zl_string">"Hello, world!"</span>,10,0
 
-<span class="zl_word">function</span> printstr(esi){
-  <span class="zl_nasm_inst">push</span> esi
-  <span class="zl_nasm_inst">call</span> _printf
-}
+<span class="zl_word">#include</span> <span class="zl_string">&lt;stdio&gt;</span>
 </pre>
 
 `zcc main.z main.asm -nasm:{-f win32 main.o} -link:{main.o -o prog.exe}`
