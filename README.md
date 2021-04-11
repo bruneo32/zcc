@@ -127,8 +127,6 @@ Example of a little messy "Hello world!" windows executable:
 }
 </pre>
 
-`zcc main.z main.asm -nasm:"-f win32 main.o"`
-
-`gcc main.o -o prog.exe`
+`zcc main.z main.asm -nasm:"-f win32 main.o" -link:"main.o -o prog.exe`
 
 ![](example_helloworld.png)
