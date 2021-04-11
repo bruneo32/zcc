@@ -112,7 +112,7 @@ Example of a little messy "Hello world!" windows executable:
 <span class="zl_nasm_dir">bits</span> 32
 
 <span class="zl_nasm_dir">section</span> .text
- _main:
+_main:
   <span class="zl_word">for</span>(cx=0, cx<5, cx++){
     <span class="zl_word">callf</span> printstr(str_hello)
   }
@@ -132,5 +132,6 @@ Example of a little messy "Hello world!" windows executable:
 `zcc main.z main.asm -nasm:{-f elf32 main.o} -link:{main.o -o proga -melf_i386}`
 
 ![](example_helloworld2.png)
-`Note: compiling elf32 requires entry point "_start" instead of "_main"`
+
+`Note: compiling elf requires entry point "_start" instead of "_main"`
 
