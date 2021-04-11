@@ -129,7 +129,7 @@ Example of a little messy "Hello world!" windows executable:
 
 ![](example_helloworld.png)
 
-`zcc main.z main.asm -nasm:{-f elf32 main.o} -link:{main.o -o prog.exe -melf_i386}`
+`zcc main.z main.asm -nasm:{-f elf32 main.o} -link:{main.o -o proga -melf_i386}`
 
 ![](example_helloworld2.png)
 `Note: compiling elf32 requires entry point "_start" instead of "_main"`
