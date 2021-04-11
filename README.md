@@ -125,15 +125,14 @@ _start:
 <span class="zl_word">#include</span> <span class="zl_string">&lt;stdio&gt;</span>
 </pre>
 
-Windows:
-
-`zcc main.z main.asm -nasm:{-f win32 main.o} -link:{main.o -o prog.exe}`
-
-![](example_helloworld.png)
-
 Linux:
 
 `zcc main.z main.asm -nasm:{-f elf32 main.o} -link:{main.o -o progra -melf_i386}`
 
 ![](example_helloworld2.png)
 
+Windows:
+
+`zcc main.z main.asm -nasm:{-f win32 main.o} -link:{main.o -o prog.exe}`
+
+![](example_helloworld.png)
