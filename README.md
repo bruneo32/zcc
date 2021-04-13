@@ -88,16 +88,16 @@ Example of a simple BOOT sector in Z
 <span class="zl_nasm_dir">org</span> 0x7c00
 <span class="zl_nasm_dir">bits</span> 16
 
-<span class="zl_word">callf</span> printStr(str_hello)
+<span class="zl_word">callf</span> print_str(str_hello)
 
 <span class="zl_nasm_inst">cli</span>
 <span class="zl_nasm_inst">hlt</span>
 
 <span class="zl_word">def</span> str_hello = <span class="zl_string">"Hello world!"</span>,0
 
-<span class="zl_word">function</span> printStr(si){
+<span class="zl_word">function</span> print_str(si){
   <span class="zl_word">while</span> (<span class="zl_inmed">$si</span> != 0){
-    <span class="zl_word">callk</span> printChar(<span class="zl_nasm_inst">word</span> <span class="zl_inmed">$si</span>)
+    <span class="zl_word">callf</span> print_char(<span class="zl_nasm_inst">byte</span> <span class="zl_inmed">$si</span>)
     si++
   }
 }
@@ -124,17 +124,22 @@ Example of a "Hello world!" executable in Z
 <span class="zl_nasm_dir">global</span> _start
 
 <span class="zl_nasm_dir">bits</span> 32
+<span class="zl_word">zdefine</span> <span class="zl_comment">; Call this always after defining bits</span>
 
 <span class="zl_nasm_dir">section</span> .text
 _start:
+	<span class="zl_comment">// Program entry point</span>
+  
   <span class="zl_word">for</span>(cx=0, cx<5, cx++){
-    <span class="zl_word">callf</span> printstr(str_hello)
+    <span class="zl_word">callf</span> printstrln(str_hello)
   }
   
+	<span class="zl_comment">// Program end</span>
   <span class="zl_word">callk</span> end0()
 
+<span class="zl_comment">// Program variables</span>
 <span class="zl_nasm_dir">section</span> .data
-<span class="zl_word">def</span> str_hello = <span class="zl_string">"Hello, world!"</span>,10,0
+<span class="zl_word">def</span> str_hello = <span class="zl_string">"Hello, world!"</span>,0
 
 <span class="zl_word">#include</span> <span class="zl_string">&lt;stdio&gt;</span>
 </pre>
@@ -142,11 +147,15 @@ _start:
 Linux:
 
 `zcc main.z main.asm -nasm:{-f elf32 main.o} -link:{main.o -o progra -melf_i386}`
+or
+`zcc main.z progra -elf32`
 
 ![](example_helloworld2.png)
 
 Windows:
 
 `zcc main.z main.asm -nasm:{-f win32 main.o} -alink:{main.o -o prog.exe -subsys con}`
+or
+`zcc main.z prog.exe -win32`
 
 ![](example_helloworld.png)
