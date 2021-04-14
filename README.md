@@ -79,6 +79,10 @@ Especial thanks to <a target="_blank" href="https://github.com/arf20">@arf20</a>
   </a>
 </div>
 
+# We are looking for MAC OS support
+We want to distribute zcc for mac too, but we have no mac and we know nothing about mac.
+If you want to help us, contact me on [bruno@retronomicon.gq](mailto:bruno@retronomicon.gq).
+
 # Z language
 Z is a programming language which extends Assembly to a
 
