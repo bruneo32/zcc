@@ -87,6 +87,7 @@ Example of a simple BOOT sector in Z
 <pre>
 <span class="zl_nasm_dir">org</span> 0x7c00
 <span class="zl_nasm_dir">bits</span> 16
+<span class="zl_word">zdefine</span>
 
 <span class="zl_word">callf</span> print_str(str_hello)
 
@@ -97,7 +98,7 @@ Example of a simple BOOT sector in Z
 
 <span class="zl_word">function</span> print_str(si){
   <span class="zl_word">while</span> (<span class="zl_inmed">$si</span> != 0){
-    <span class="zl_word">callf</span> print_char(<span class="zl_nasm_inst">byte</span> <span class="zl_inmed">$si</span>)
+    <span class="zl_word">callf</span> print_char(<span class="zl_inmed">$si</span>)
     si++
   }
 }
@@ -128,13 +129,13 @@ Example of a "Hello world!" executable in Z
 
 <span class="zl_nasm_dir">section</span> .text
 _start:
-	<span class="zl_comment">// Program entry point</span>
+  <span class="zl_comment">// Program entry point</span>
   
   <span class="zl_word">for</span>(cx=0, cx<5, cx++){
     <span class="zl_word">callf</span> printstrln(str_hello)
   }
   
-	<span class="zl_comment">// Program end</span>
+  <span class="zl_comment">// Program end</span>
   <span class="zl_word">callk</span> end0()
 
 <span class="zl_comment">// Program variables</span>
