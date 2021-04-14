@@ -155,7 +155,7 @@ or
 
 Windows:
 
-`zcc main.z main.asm -nasm:{-f win32 main.o} -alink:{main.o -o prog.exe -subsys con}`
+`zcc main.z main.asm -nasm:{-f win32 main.o} -golink:{main.o /fo:prog.exe /console}`
 or
 `zcc main.z prog.exe -win32`
 
