@@ -69,7 +69,6 @@ Especial thanks to <a target="_blank" href="https://github.com/arf20">@arf20</a>
 </div>
 
 ## Download for MAC OS
-### We are looking for MAC OS support
 We want to distribute zcc for mac too, but we have no mac and we know nothing about mac.
 
 If you want to help us, contact me on [bruno@retronomicon.gq](mailto:bruno@retronomicon.gq).
@@ -81,6 +80,9 @@ If you want to help us, contact me on [bruno@retronomicon.gq](mailto:bruno@retro
   </a>
   <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/extra" id="download-npp" class="button">
     <span>Notepad++ UDL</span>
+  </a>
+  <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/extra/examples" id="download-zip" class="button">
+    <span>Examples</span>
   </a>
 </div>
 
