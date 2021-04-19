@@ -68,11 +68,6 @@ Especial thanks to <a target="_blank" href="https://github.com/arf20">@arf20</a>
   </a>
 </div>
 
-## Download for MAC OS
-We want to distribute zcc for mac too, but we have no mac and we know nothing about mac.
-
-If you want to help us, contact me on [bruno@retronomicon.gq](mailto:bruno@retronomicon.gq).
-
 ## Extra
 <div id="downloads" class="clearfix">
   <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/source" id="download-any" class="button">
