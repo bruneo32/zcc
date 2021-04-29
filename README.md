@@ -118,7 +118,7 @@ Example of a simple BOOT sector in Z
 <span class="zl_nasm_dir">db</span> 0x55,0xAA
 </pre>
 
-`zcc main.z main.asm -h -c -nasm:{-f bin main.flp}`
+`zcc main.z main.asm -c -nasm:{-f bin main.flp}`
 
 ![](example_boot.png)
 
