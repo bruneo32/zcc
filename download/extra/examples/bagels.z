@@ -1,0 +1,201 @@
+global _start
+
+bits 32
+zdefine ; Call this always after defining bits
+
+section .text
+_start:
+	// Program entry point
+	callf printstrln(str_hello)
+	callf printstr(str_prompt_rules)
+	
+	callf getstr(STD_IN,100)
+	callf printchar(byte 10)
+	if($STD_IN=='Y' || $STD_IN=='y'){
+		callf printstrln(str_rules)
+	}
+	
+	.startgame:
+	callf generateNumber()
+	callf printstrln(str_ok_try)
+	callf memset(str_guess+8,byte '?',1) // if last game was >10
+	
+	for(cl=1, cl<=20, cl++){
+		// Change the 7 char of str_guess
+		if(cl<10){
+			dl=cl
+			dl+=48
+			callf memset(str_guess+7,byte dl,1)
+		}elif(cl==20){
+			callf memset(str_guess+7,byte '2',1)
+			callf memset(str_guess+8,byte '0',1)
+		}else{
+			dl=cl
+			dl+=38 ; 10 less
+			callf memset(str_guess+8,byte dl,1)
+			
+			if(cl==10){
+				// Just the first time
+				callf memset(str_guess+7,byte '1',1)
+				callf memset(str_guess+9,byte '?',1)
+			}
+		}
+		
+		.retry:
+		
+		callf printstr(str_guess)
+		callf getstr(STD_IN,100)
+		
+		$_pico=0
+		$_fermi=0
+		bl=$STD_IN+2
+		if($STD_IN == bl){
+			callf printstrln(str_samedigits)
+			jmp .retry
+		}
+		
+		for(ch=0,ch<3,ch++){
+			//callk array_pos(STD_IN,_z_rs ch) // Return in _z_si
+			movzx _z_si, ch
+			add _z_si, STD_IN
+			
+			if($_z_si < byte '0' || $_z_si > byte '9'){
+				callf printstrln(str_tryagain)
+				jmp .retry
+			}
+
+			if(ch>0){
+				bl=$_z_si-1
+				if($_z_si==bl){
+					callf printstrln(str_samedigits)
+					jmp .retry
+				}
+			}
+
+			push word cx
+			//callk array_pos(number,ch)
+			movzx _z_si, ch
+			add _z_si, number
+			callk memchr(STD_IN, byte $_z_si,3) // Destroy CX
+			pop word cx
+			
+			if(eax==-1){
+				continue
+			} elif (al==ch){
+				$_fermi++
+			} else{
+				$_pico++
+			}
+		}
+		
+		
+		
+		if($_fermi==3){
+			$points++
+			callf printstrln(str_win)
+			jmp .endgame
+		}
+		
+		if($_pico==0 && $_fermi==0){
+			callf printstrln(str_bagels)
+		}else{
+			for(,$_pico>0,$_pico--){
+				callf printstr(str_pico)
+			}
+			callf printchar(byte 10)
+			
+			for(,$_fermi>0,$_fermi--){
+				callf printstr(str_fermi)
+			}
+			callf printchar(byte 10)
+		}
+	}
+	
+	callf printstr(str_ohwell)
+	callf printchar($number)
+	callf printchar($number+1)
+	callf printchar($number+2)
+	callf printchar(byte 10)
+	callf printchar(byte 10)
+	
+	.endgame:
+	callf printstr(str_playagain)
+	callf getstr(STD_IN,100)
+	callf printchar(byte 10)
+	if($STD_IN=='Y' || $STD_IN=='y'){
+		jmp .startgame
+	}
+
+	// Program end
+	if($points==1){
+		al=$points
+		al+='0'
+		callf memset(str_points+3,byte al,1)
+		callf printstr(str_points)
+	}
+	callf printstrln(str_endgame)
+	callk end0()
+
+// Program variables
+section .data
+def str_hello=
+	db 10 ; Line break
+	put[30](' ') ; 30 spaces
+	db "BAGELS",10
+	put[15](' ') ; 15 spaces
+	db "CREATIVE COMPUTING  MORRISTOWN, NEW JERSEY",10
+	db 10
+	db 0
+def str_rules=
+	db "I AM THINKING OF A THREE-DIGIT NUMBER.  TRY TO GUESS",10
+	db "MY NUMBER AND I WILL GIVE YOU CLUES AS FOLLOWS:",10
+	db "   PICO   - ONE DIGIT CORRECT BUT IN THE WRONG POSITION",10
+	db "   FERMI  - ONE DIGIT CORRECT AND IN THE RIGHT POSITION",10
+	db "   BAGELS - NO DIGITS CORRECT",10
+	db 0
+
+def str_prompt_rules = "WOULD YOU LIKE THE RULES (YES OR NO)? ",0
+def str_ok_try = 10,"O.K.  I HAVE A NUMBER IN MIND.",10,0
+def str_guess = "GUESS #0? ",0,0 // Padding for 2 digit guesses
+def str_tryagain = "TRY GUESSING A THREE-DIGIT NUMBER.",10,0
+def str_win = "YOU GOT IT!!!",10,0
+def str_playagain = "PLAY AGAIN (YES OR NO)? ",0
+def str_endgame = 10,"HOPE YOU HAD FUN.  BYE.",0
+def str_points = 10,"A 0 POINT BAGELS BUFF!!",0
+def str_ohwell = "OH WELL.",10,"THAT'S TWNETY GUESSES.  MY NUMBER WAS ",0
+def str_samedigits = "OH, I FORGOT TO TELL YOU THAT THE NUMBER I HAVE IN MIND",10,"HAS NO TWO DIGITS THE SAME.",10,0
+
+def str_pico="PICO ",0
+def str_fermi="FERMI ",0
+def str_bagels="BAGELS",0
+
+
+def number="xxx"
+def _pico=0
+def _fermi=0
+
+def points=0
+
+function generateNumber(){
+	;callf rand_new()
+
+	for(cl=0,cl<3,cl++){
+		movzx _z_si, cl
+		_z_si+=number
+		
+		.ran:
+		rdtsc	;Get real time clock in EDX:EAX
+		xor eax, edx
+		if(al<'0' || al>'9'){
+			jmp .ran
+		}
+		if($number == al || $number+1 == al){
+			jmp .ran
+		}
+		
+		callf memset(_z_si,byte al,1)
+	}
+}
+
+#include <stdio>
+#include <memory>
