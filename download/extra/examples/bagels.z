@@ -180,8 +180,6 @@ def _fermi=0
 def points=0
 
 function generateNumber(){
-	;callf rand_new()
-
 	for(cl=0,cl<3,cl++){
 		movzx _z_si, cl
 		_z_si+=number
@@ -196,7 +194,7 @@ function generateNumber(){
 	}
 }
 function randbyte(byte bh, byte bl){
-	// randbyte(byte min, byte max)
+	// callf randbyte(byte min, byte max)
 	// Return CHAR in AL
 
 	push edx
