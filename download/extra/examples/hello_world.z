@@ -1,0 +1,30 @@
+global _start
+
+bits 32
+zdefine ; Call this always after defining bits
+
+section .text
+_start:
+	// Program entry point
+
+	for(cl=1, cl<=5, cl++){
+		callf printstr(str_hello)
+		
+		// bh=cl+'0' does not work because is not an adition
+		bh = cl
+		bh+= '0'	; Padding from 0 to '0'
+		
+		callf printchar(byte ' ')
+		callf printchar(byte bh)
+		
+		callf printchar(byte 10)	; Line break
+	}
+
+	// Program end
+	callk end0()
+
+section .data
+// Program data (variables, functions, includes, ...)
+def str_hello = "Hello, world!",0 
+
+#include <stdio>
