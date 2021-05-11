@@ -83,7 +83,7 @@ Especial thanks to <a target="_blank" href="https://github.com/arf20">@arf20</a>
 
 
 # Z language
-Z is a programming language which extends Assembly to a
+Z language is an extension of the x86 assembly language, creating one more abstraction layer with logic blocks, loops and functions.
 
 ### Examples
 Example of a simple BOOT sector in Z
