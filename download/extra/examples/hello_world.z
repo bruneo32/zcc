@@ -10,7 +10,8 @@ _start:
 	for(cl=1, cl<=5, cl++){
 		callf printstr(str_hello)
 		
-		// bh=cl+'0' does not work because is not an adition
+		// bh=cl+'0' does not work because you cannot add a register and an inmediate together
+		// So:
 		bh = cl
 		bh+= '0'	; Padding from 0 to '0'
 		
