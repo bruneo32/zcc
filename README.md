@@ -3,6 +3,9 @@
 <style>
   header,section#downloads,div.inner>hr{display:none;}
   
+  #download-exa{
+    background: transparent url("https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Apps-accessories-dictionary-icon.png") 12px 50% no-repeat;
+  }
   #download-any{
     background: transparent url("https://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/32/Actions-go-down-icon.png") 12px 50% no-repeat;
   }
@@ -76,7 +79,7 @@ Especial thanks to <a target="_blank" href="https://github.com/arf20">@arf20</a>
   <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/extra" id="download-npp" class="button">
     <span>Notepad++ UDL</span>
   </a>
-  <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/extra/examples" id="download-zip" class="button">
+  <a target="_blank" href="https://github.com/bruneo32/zcc/tree/main/download/extra/examples" id="download-exa" class="button">
     <span>Examples</span>
   </a>
 </div>
