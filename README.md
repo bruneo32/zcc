@@ -141,8 +141,8 @@ _start:
   <span class="zl_comment">// Program end</span>
   <span class="zl_word">callk</span> end0()
 
-<span class="zl_comment">// Program variables</span>
 <span class="zl_nasm_dir">section</span> .data
+<span class="zl_comment">// Program data (variables, functions, includes, ...)</span>
 <span class="zl_word">def</span> str_hello = <span class="zl_string">"Hello, world!"</span>,0
 
 <span class="zl_word">#include</span> <span class="zl_string">&lt;stdio&gt;</span>
