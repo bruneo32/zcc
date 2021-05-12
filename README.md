@@ -10,7 +10,7 @@ Z language is an extension of the x86 assembly language, creating one more abstr
 ## zcc includes
 zcc includes libraries like: *stdio, math, memory, strings, ...*
 
-In order to create programs for Windows and Linux, or to ease the task of developing an operative system.
+In order to create executable programs for Windows and Linux, or to ease the task of developing an operative system.
 
 # More
 Continue learning in the [official site](https://bruneo32.github.io/zcc/)
