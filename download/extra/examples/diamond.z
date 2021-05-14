@@ -1,0 +1,68 @@
+global _start
+
+bits 32
+zdefine ; Call this always after defining bits
+
+section .text
+_start:
+	// Program entry point
+	callf printchar(byte 10)
+	
+	for(cl=1, cl<= 17/2+1, cl++){
+		ch = (17+1)/2
+		ch-= cl
+		ch++
+		for(bh=1, bh<= ch, bh++){
+			callf printchar(byte ' ')
+		}
+		
+		/*
+			MUL instruction
+			
+			AX = source * AL		; if source is a byte
+			DX:AX = source * AX		; if source is a word
+		*/
+		
+		al=cl
+		bl=byte 2
+		mul bl
+		ch = al
+		ch--
+		for(bh=1, bh<= ch, bh++){
+			callf printchar(byte '*')
+		}
+		
+		; Line end
+		callf printchar(byte 10)
+	}
+	
+	for(cl=1, cl<= 17/2, cl++){
+		ch=cl
+		ch++
+		for(bh=1, bh<=ch, bh++){
+			callf printchar(byte ' ')
+		}
+		
+		ch = (17+1)/2
+		ch-= cl
+		al=ch
+		bl=byte 2
+		mul bl
+		ch = al
+		ch--
+		for(bh=1, bh<= ch, bh++){
+			callf printchar(byte '*')
+		}
+		
+		; Line end
+		callf printchar(byte 10)
+	}
+	
+	// Program end
+	callf printchar(byte 10)
+	callk end0()
+
+section .data
+
+
+#include <stdio>

@@ -194,6 +194,7 @@ function generateNumber(){
 	}
 }
 function randbyte(byte bh, byte bl){
+	// pseudo-random number generator between [min,max]
 	// callf randbyte(byte min, byte max)
 	// Return CHAR in AL
 
