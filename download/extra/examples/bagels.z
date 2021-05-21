@@ -59,7 +59,7 @@ _start:
 		
 		for(ch=0,ch<3,ch++){
 			//callk array_pos(STD_IN,_z_rs ch) // Return in _z_si
-			movzx _z_si, ch
+			_z_si*=ch
 			add _z_si, STD_IN
 			
 			if($_z_si < byte '0' || $_z_si > byte '9'){
@@ -77,7 +77,7 @@ _start:
 
 			push word cx
 			//callk array_pos(number,ch)
-			movzx _z_si, ch
+			_z_si*=ch
 			add _z_si, number
 			callk memchr(STD_IN, byte $_z_si,3) // Destroy CX
 			pop word cx
@@ -181,7 +181,7 @@ def points=0
 
 function generateNumber(){
 	for(cl=0,cl<3,cl++){
-		movzx _z_si, cl
+		_z_si*=cl
 		_z_si+=number
 		
 		.ran:
