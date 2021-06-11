@@ -1,12 +1,12 @@
 Comments:
 	; LINE
 
-	// LINE
+	\/\/ LINE
 
-	/*
+	\/*
 	MULTI
 	LINE
-	*/
+	*\/
 
 	\#\#\#			Do not parse the code between \#\#\# and \#\#\#,
 				it goes raw for the assembler
