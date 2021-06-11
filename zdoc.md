@@ -24,6 +24,7 @@ a
 	(tword)
 
 ## Registers
+```
 				bits	16	32	64
 	_z_ax				AX	EAX	RAX
 	_z_bx				BX	EBX	RBX
@@ -36,11 +37,11 @@ a
 
 	_z_rs				word	dword	qword
 	_z_rsb				2	4	8
-
+```
 
 ## Modifiers
 
-	$abc		(Default)	byte [abc]
+$abc		(Default)	byte [abc]
 			word $abc	word [abc]
 					...
 
@@ -56,7 +57,7 @@ Create a buffer
 *Eq.:* `times n db 0`
 
 
-**put[*n*](*c*)**			times n db c
+**put\[*n*\]\(*c*\)**			times n db c
 
 	if				if (logic_block) {
 						statements
@@ -87,7 +88,7 @@ Create a buffer
 	zpusha				Push all the registers
 	zpopa				Pop all the registers
 
-	#include			#include <file>		from the zcc/includes directory
+	\#include			\#include \<file\>		from the zcc/includes directory
 	* Compiles a z file		#include "file"		from the working directory
 	  and includes it
 
@@ -125,7 +126,7 @@ function f_name(parameters){
 **return**
 Exit a function. DO NOT USE  RET instruction.
 
-
+\
 
 ### * PARAMETERS FOR FUNCTIONS AND CALLS
 Parameters must specify the data type.
@@ -139,7 +140,7 @@ For example:
 If no data type is provided, it will be understood as a memory address.
 For example:
 `callf printstr(str_hello)`
-Where str_hello is a memory address and its size relies on *_z_rs*.
+Where str_hello is a memory address and its size relies on ***_z_rs***.
 
 
 Examples:
@@ -189,9 +190,9 @@ function printstr(si){
 	a << b		shl a, b
 	a >> b		shr a, b
 	~a			not a
-	a & b		and a, b
-	a | b		or  a, b
-	a ^ b		xor a, b
+	a & b			and a, b
+	a | b			or  a, b
+	a ^ b			xor a, b
 	```
 
 - compare
@@ -208,19 +209,19 @@ function printstr(si){
 	||
 
 	flagc			Test if CF is ON
-	!flagc			Test if CF is OFF
+	!flagc		Test if CF is OFF
 
 	flagz			Test if ZF is ON
-	!flagz			Test if ZF is OFF
+	!flagz		Test if ZF is OFF
 
 	flags			Test if SF is ON
-	!flags			Test if SF is OFF
+	!flags		Test if SF is OFF
 
 	flagp			Test if PF is ON
-	!flagp			Test if PF is OFF
+	!flagp		Test if PF is OFF
 
 	flago			Test if OF is ON
-	!flago			Test if OF is OFF
+	!flago		Test if OF is OFF
 	```
 
 
