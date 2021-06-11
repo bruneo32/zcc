@@ -2,41 +2,43 @@
 a
 
 ## Comments
+```
+; LINE
 
-	; LINE
+// LINE
 
-	// LINE
+/*
+MULTI
+LINE
+*/
 
-	/*
-	MULTI
-	LINE
-	*/
-
-	###			Do not parse the code between ### and ###,
-				it goes raw for the assembler
+###			Do not parse the code between ### and ###,
+			it goes raw for the assembler
+```
 
 ## Data types (from nasm)
 
-	byte
-	word
-	dword
-	qword
-	(tword)
+byte
+word
+dword
+qword
+(tword)
+
 
 ## Registers
 ```
-				bits	16	32	64
-	_z_ax				AX	EAX	RAX
-	_z_bx				BX	EBX	RBX
-	_z_cx				CX	ECX	RCX
-	_z_dx				DX	EDX	RDX
-	_z_si				SI	ESI	RSI
-	_z_di				DI	EDI	RDI
-	_z_sp				SP	ESP	RSP
-	_z_bp				BP	EBP	RBP
+			bits	16	32	64
+_z_ax				AX	EAX	RAX
+_z_bx				BX	EBX	RBX
+_z_cx				CX	ECX	RCX
+_z_dx				DX	EDX	RDX
+_z_si				SI	ESI	RSI
+_z_di				DI	EDI	RDI
+_z_sp				SP	ESP	RSP
+_z_bp				BP	EBP	RBP
 
-	_z_rs				word	dword	qword
-	_z_rsb				2	4	8
+_z_rs				word	dword	qword
+_z_rsb				2	4	8
 ```
 
 ## Modifiers
@@ -54,43 +56,61 @@ $abc		(Default)	byte [abc]
 **buf[*n*]**
 Create a buffer
 
-*Eq.:* `times n db 0`
+*NASM Eq.:* `times n db 0`
 
 
-**put\[*n*\]\(*c*\)**			times n db c
+**put\[*n*\]\(*c*\)**
+*NASM Eq.:* `times n db c`
 
-	if				if (logic_block) {
-						statements
-	elif				} elif (logic_block){
-						statements
-	else				} else {
-						statements
-					}
+**if**, **elif**, and **else**
+```
+if (logic_block) {
+	statements
+} elif (logic_block){
+	statements
+} else {
+	statements
+}
+```
 
-	while				while (logic_block) {
-						statements
-					}
+**while**
+```
+while (logic_block) {
+	statements
+}
+```
+* Since TRUE and FALSE does not exist in Z, you can use
+  while(){} to make an infinite loop
 
-					* Since TRUE and FALSE does not exist in Z, you can use
-					  while(){} to make an infinite loop
+**for**
+```
+for (init, logic_block, increment) {
+	statements
+}
+```
 
+**continue**
+Go for the next cycle of a loop
 
-	for				for (init, logic_block, increment) {
-						statements
-					}
+**break**
+Break a loop
 
-	continue			Go for the next cycle of a loop
-	break				Break a loop
+**zdefine**
+Define all Z requirements for the assembler, like: *zpush*, *_z_ax*, *...*
+Which are necessary for Z functions and other stuff
 
-	zdefine				Define Z requirements for the assembler, like: zpush, _z_ax, ...
-					Which are necessary for functions and other stuff
+**zpusha**
+Push all the registers
 
-	zpusha				Push all the registers
-	zpopa				Pop all the registers
+**zpopa**
+Pop all the registers
 
-	\#include			\#include \<file\>		from the zcc/includes directory
-	* Compiles a z file		#include "file"		from the working directory
-	  and includes it
+**#include**
+Compiles an external Z file, and includes it.
+```
+#include <file>		from the ../zcc/includes directory
+#include "file"		from the working directory
+```
 
 
 ## FUNCTION CALL
@@ -126,7 +146,8 @@ function f_name(parameters){
 **return**
 Exit a function. DO NOT USE  RET instruction.
 
-\
+
+
 
 ### * PARAMETERS FOR FUNCTIONS AND CALLS
 Parameters must specify the data type.
