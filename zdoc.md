@@ -12,17 +12,19 @@ MULTI
 LINE
 */
 
+```
+```
 ###			Do not parse the code between ### and ###,
 			it goes raw for the assembler
 ```
 
 ## Data types (from nasm)
 
-byte
-word
-dword
-qword
-(tword)
+- **byte**
+- **word**
+- **dword**
+- **qword**
+- **(tword)**
 
 
 ## Registers
@@ -42,16 +44,20 @@ _z_rsb				2	4	8
 ```
 
 ## Modifiers
-
+Dollar **$**.
+```
 $abc		(Default)	byte [abc]
 			word $abc	word [abc]
 					...
+```
 
 ## Z words
-
-**def**		(Default)	def var_name = 0,1,2,3,4		var_name: db 0,1,2,3,4
-					def var_name = dw 0,1,2,3,4		var_name: dw 0,1,2,3,4
-					...
+**def**	
+```
+def var_name = 0,1,2,3,4		var_name: db 0,1,2,3,4		(Default)
+def var_name = dw 0,1,2,3,4		var_name: dw 0,1,2,3,4
+...
+```
 
 **buf[*n*]**
 Create a buffer
@@ -60,7 +66,9 @@ Create a buffer
 
 
 **put\[*n*\]\(*c*\)**
+
 *NASM Eq.:* `times n db c`
+
 
 **if**, **elif**, and **else**
 ```
@@ -79,8 +87,7 @@ while (logic_block) {
 	statements
 }
 ```
-* Since TRUE and FALSE does not exist in Z, you can use
-  while(){} to make an infinite loop
+### * Since TRUE and FALSE does not exist in Z, you can use `while(){} to make an infinite loop`
 
 **for**
 ```
@@ -138,7 +145,7 @@ Function call keeping results
 
 **function statement**
 ```
-function f_name(parameters){
+function function_name(parameters){
 	statements
 }
 ```
@@ -149,16 +156,16 @@ Exit a function. DO NOT USE  RET instruction.
 
 
 
-### * PARAMETERS FOR FUNCTIONS AND CALLS
+### * Parameters for functions and calls
 Parameters must specify the data type.
 
 For example:
 `callf myadd(byte 3, byte 2)`
-
-\* Since for *myadd(byte, byte)* expected two fixed size parameters
+Since for `myadd(byte, byte)` expected two fixed size parameters
 							
 							
 If no data type is provided, it will be understood as a memory address.
+
 For example:
 `callf printstr(str_hello)`
 Where str_hello is a memory address and its size relies on ***_z_rs***.
