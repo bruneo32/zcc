@@ -94,8 +94,13 @@ Create a buffer
 
 ## FUNCTIONS
 
-	callf				callf function_name(parameters)		(Function call surrounded by zpusha and zpopa)
-	callk				callk function_name(parameters)		(Function call keeping results)
+**callf**
+`callf function_name(parameters)`
+Function call surrounded by zpusha and zpopa
+
+**callk**
+`callk function_name(parameters)`
+Function call keeping results
 
 ### * Use callf or callk?
 **callk** is a simple function call, but **callf** will save all the registers into the stack before calling the function, so you can play with any register you want inside the function without caring about the registers destroyed. The counter side is that you cannot return anything this way.
@@ -144,27 +149,30 @@ Create a buffer
 ## OPERATORS
 
 - assing
-	```
-	a  = b			mov   a, b	
-	a *= b			movzx a, b
 
-	a += b			add a, b
-	a -= b			sub a, b
+	```
+	a  = b		mov   a, b	
+	a *= b		movzx a, b
+
+	a += b		add a, b
+	a -= b		sub a, b
 	a++			inc a
 	a--			dec a
 	```
 
 - bitwise
+
 	```
-	a << b			shl a, b
-	a >> b			shr a, b
+	a << b		shl a, b
+	a >> b		shr a, b
 	~a			not a
-	a & b			and a, b
-	a | b			or  a, b
-	a ^ b			xor a, b
+	a & b		and a, b
+	a | b		or  a, b
+	a ^ b		xor a, b
 	```
 
 - compare
+
 	```
 	==
 	!=
