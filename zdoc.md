@@ -1,5 +1,10 @@
+<br>
+<style>
+  *{tab-size:4;}
+</style>
+
 # Z language
-a
+jaja
 
 ## Comments
 ```
@@ -11,14 +16,13 @@ a
 MULTI
 LINE
 */
+```
+```
+###		Do not parse the code between ### and ###,
+		it goes raw for the assembler
+```
 
-```
-```
-###			Do not parse the code between ### and ###,
-			it goes raw for the assembler
-```
-
-## Data types (from nasm)
+## Data types (from NASM)
 
 - **byte**
 - **word**
