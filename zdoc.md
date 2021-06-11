@@ -46,12 +46,17 @@ a
 
 ## Z words
 
-	def		(Default)	def var_name = 0,1,2,3,4		var_name: db 0,1,2,3,4
+**def**		(Default)	def var_name = 0,1,2,3,4		var_name: db 0,1,2,3,4
 					def var_name = dw 0,1,2,3,4		var_name: dw 0,1,2,3,4
 					...
 
-	buf[n]				times n db 0
-	put[n](c)			times n db c
+**buf[*n*]**
+Create a buffer
+
+*Eq.:* `times n db 0`
+
+
+**put[*n*](*c*)**			times n db c
 
 	if				if (logic_block) {
 						statements
@@ -139,7 +144,7 @@ a
 ## OPERATORS
 
 - assing
-
+	```
 	a  = b			mov   a, b	
 	a *= b			movzx a, b
 
@@ -147,18 +152,20 @@ a
 	a -= b			sub a, b
 	a++			inc a
 	a--			dec a
+	```
 
 - bitwise
-
+	```
 	a << b			shl a, b
 	a >> b			shr a, b
 	~a			not a
 	a & b			and a, b
 	a | b			or  a, b
 	a ^ b			xor a, b
+	```
 
 - compare
-
+	```
 	==
 	!=
 	<
@@ -183,10 +190,11 @@ a
 
 	flago			Test if OF is ON
 	!flago			Test if OF is OFF
+	```
 
 
 ## LOGIC BLOCKS
 
-		Logic blocks can be in statements:  while, for (second argument), if and elif.
+Logic blocks can be in statements:  while, for (second argument), if and elif.
 		
 
