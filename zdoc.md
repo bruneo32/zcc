@@ -8,8 +8,8 @@ Comments:
 	LINE
 	*/
 
-	###				Do not parse the code between ### and ###,
-					it goes raw for the assembler
+	\#\#\#			Do not parse the code between \#\#\# and \#\#\#,
+				it goes raw for the assembler
 
 Data types: (from nasm)
 	byte
