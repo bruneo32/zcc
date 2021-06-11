@@ -1,14 +1,17 @@
-# Comments
+# Z language
+
+## Comments
+
 	; LINE
 
-	\/\/ LINE
+	// LINE
 
-	\/*
+	/*
 	MULTI
 	LINE
-	*\/
+	*/
 
-	\#\#\#			Do not parse the code between \#\#\# and \#\#\#,
+	###			Do not parse the code between ### and ###,
 				it goes raw for the assembler
 
 Data types: (from nasm)
