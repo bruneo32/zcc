@@ -1,6 +1,6 @@
 <br>
-<link rel="shortcut icon" type="image/x-icon" href="favicon.png?">
 <style>
+  *{tab-size:4;}
   header,section#downloads,div.inner>hr{display:none;}
   
   #download-exa{
