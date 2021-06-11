@@ -92,11 +92,10 @@ a
 	callf				callf function_name(parameters)		(Function call surrounded by zpusha and zpopa)
 	callk				callk function_name(parameters)		(Function call keeping results)
 
-	* Use callf or callk?		callk is a simple function call, but callf will save all the registers into the stack before
-					calling the function, so you can play with any register you want inside the function without
-					caring about the registers destroyed. The counter side is that you cannot return anything this way.
+### * Use callf or callk?
+**callk** is a simple function call, but **callf** will save all the registers into the stack before calling the function, so you can play with any register you want inside the function without caring about the registers destroyed. The counter side is that you cannot return anything this way.
 
-			Short answer:	Use callf for voids and callk for data return functions, but beware of the registers destroyed.
+*Short answer:*	Use **callf** for voids and **callk** for data return functions, but beware of the registers destroyed.
 
 
 	function			function f_name(parameters){
@@ -140,6 +139,7 @@ a
 ## OPERATORS
 
 - assing
+
 	a  = b			mov   a, b	
 	a *= b			movzx a, b
 
@@ -149,6 +149,7 @@ a
 	a--			dec a
 
 - bitwise
+
 	a << b			shl a, b
 	a >> b			shr a, b
 	~a			not a
@@ -157,6 +158,7 @@ a
 	a ^ b			xor a, b
 
 - compare
+
 	==
 	!=
 	<
