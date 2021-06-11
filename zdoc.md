@@ -92,19 +92,20 @@ Create a buffer
 	  and includes it
 
 
-## FUNCTIONS
+## FUNCTION CALL
 
 **callf**
 
-`callf function_name(parameters)`
-
 Function call surrounded by zpusha and zpopa
+
+`**callf** function_name(parameters)`
+
 
 **callk**
 
-`callk function_name(parameters)`
-
 Function call keeping results
+
+`**callk** function_name(parameters)`
 
 ### * Use callf or callk?
 **callk** is a simple function call, but **callf** will save all the registers into the stack before calling the function, so you can play with any register you want inside the function without caring about the registers destroyed. The counter side is that you cannot return anything this way.
@@ -112,17 +113,26 @@ Function call keeping results
 *Short answer:*	Use **callf** for voids and **callk** for data return functions, but beware of the registers destroyed.
 
 
-	function			function f_name(parameters){
-						statements
-					}
+## FUNCTION CREATE
 
-	return				Exit a function. DO NOT USE  RET instruction.
+**function**
+```
+function f_name(parameters){
+	statements
+}
+```
+
+**return**
+Exit a function. DO NOT USE  RET instruction.
 
 
 
-	* PARAMETERS			Parameters must specify the data type.	For example:	callf myadd(byte 3, byte 2)
-	  For function,										Since for myadd(byte, byte) expected 2 fixed size parameters
-	  callf and callk.		If no data type is provided, it will be
+### * PARAMETERS
+Parameters must specify the data type.
+For example:	`**callf** myadd(*byte* 3, *byte* 2)`
+
+For function,										Since for myadd(byte, byte) expected 2 fixed size parameters
+callf and callk.		If no data type is provided, it will be
 					understood as a memory address.		For example:	callf printstr(str_hello)
 												Where str_hello is a memory address and its size
 												relies on _z_rs.
