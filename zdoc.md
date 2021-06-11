@@ -95,11 +95,15 @@ Create a buffer
 ## FUNCTIONS
 
 **callf**
+
 `callf function_name(parameters)`
+
 Function call surrounded by zpusha and zpopa
 
 **callk**
+
 `callk function_name(parameters)`
+
 Function call keeping results
 
 ### * Use callf or callk?
