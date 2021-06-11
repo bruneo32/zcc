@@ -1,4 +1,5 @@
 # Z language
+a
 
 ## Comments
 
@@ -14,14 +15,16 @@
 	###			Do not parse the code between ### and ###,
 				it goes raw for the assembler
 
-Data types: (from nasm)
+## Data types (from nasm)
+
 	byte
 	word
 	dword
 	qword
 	(tword)
 
-registers:			bits	16	32	64
+## Registers
+				bits	16	32	64
 	_z_ax				AX	EAX	RAX
 	_z_bx				BX	EBX	RBX
 	_z_cx				CX	ECX	RCX
@@ -35,12 +38,14 @@ registers:			bits	16	32	64
 	_z_rsb				2	4	8
 
 
-modifiers:
+## Modifiers
+
 	$abc		(Default)	byte [abc]
 			word $abc	word [abc]
 					...
 
-Z words:
+## Z words
+
 	def		(Default)	def var_name = 0,1,2,3,4		var_name: db 0,1,2,3,4
 					def var_name = dw 0,1,2,3,4		var_name: dw 0,1,2,3,4
 					...
@@ -82,7 +87,8 @@ Z words:
 	  and includes it
 
 
-FUNCTIONS:
+## FUNCTIONS
+
 	callf				callf function_name(parameters)		(Function call surrounded by zpusha and zpopa)
 	callk				callk function_name(parameters)		(Function call keeping results)
 
@@ -131,7 +137,8 @@ FUNCTIONS:
 					}
 
 
-OPERATORS:
+## OPERATORS
+
 	assing:
 		a  = b			mov   a, b	
 		a *= b			movzx a, b
@@ -177,7 +184,7 @@ OPERATORS:
 		!flago			Test if OF is OFF
 
 
-LOGIC BLOCKS:
+## LOGIC BLOCKS
 
 		Logic blocks can be in a  while, for (second argument), if and elif.
 		
