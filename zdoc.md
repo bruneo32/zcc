@@ -98,14 +98,14 @@ Create a buffer
 
 Function call surrounded by zpusha and zpopa
 
-`**callf** function_name(parameters)`
+`callf function_name(parameters)`
 
 
 **callk**
 
 Function call keeping results
 
-`**callk** function_name(parameters)`
+`callk function_name(parameters)`
 
 ### * Use callf or callk?
 **callk** is a simple function call, but **callf** will save all the registers into the stack before calling the function, so you can play with any register you want inside the function without caring about the registers destroyed. The counter side is that you cannot return anything this way.
@@ -115,7 +115,7 @@ Function call keeping results
 
 ## FUNCTION CREATE
 
-**function**
+**function statement**
 ```
 function f_name(parameters){
 	statements
@@ -127,38 +127,47 @@ Exit a function. DO NOT USE  RET instruction.
 
 
 
-### * PARAMETERS
+### * PARAMETERS FOR FUNCTIONS AND CALLS
 Parameters must specify the data type.
-For example:	`**callf** myadd(*byte* 3, *byte* 2)`
 
-For function,										Since for myadd(byte, byte) expected 2 fixed size parameters
-callf and callk.		If no data type is provided, it will be
-					understood as a memory address.		For example:	callf printstr(str_hello)
-												Where str_hello is a memory address and its size
-												relies on _z_rs.
+For example:
+`callf myadd(byte 3, byte 2)`
 
-			Examples:	function myadd(byte ax, byte bx){
-						/**
-						 * This function adds two numbers
-						 * using:	callk myadd(byte num1, byte num2)
-						 * return:	AX = num1+num2
-						 * destroy:	AX, BX
-						 */
+\* Since for *myadd(byte, byte)* expected two fixed size parameters
+							
+							
+If no data type is provided, it will be understood as a memory address.
+For example:
+`callf printstr(str_hello)`
+Where str_hello is a memory address and its size relies on *_z_rs*.
 
-						ax += bx
-					}
-					function printstr(si){
-						/**
-						 * This function prints a zero-terminated string allocated on the memory
-						 * using:	callf printstr(string_addres)
-						 */
-						
-						while ($si != 0){
-							callf printchar(byte $si)
-							si++
-						}
-					}
 
+Examples:
+```
+function myadd(byte ax, byte bx){
+	/**
+	 * This function adds two numbers
+	 * using:	callk myadd(byte num1, byte num2)
+	 * return:	AX = num1+num2
+	 * destroy:	AX, BX
+	 */
+
+	ax += bx
+}
+```
+```
+function printstr(si){
+	/**
+	 * This function prints a zero-terminated string allocated on the memory
+	 * using:	callf printstr(string_addres)
+	 */
+	
+	while ($si != 0){
+		callf printchar(byte $si)
+		si++
+	}
+}
+```
 
 ## OPERATORS
 
