@@ -1,6 +1,9 @@
 <br>
 <style>
-  *{tab-size:4;}
+	*{tab-size:4;}
+	li{
+		list-style-position: inside !important;
+	}
 </style>
 
 # Z language
@@ -18,8 +21,8 @@ LINE
 */
 ```
 ```
-###		Do not parse the code between ### and ###,
-		it goes raw for the assembler
+###			Do not parse the code between ### and ###,
+			it goes raw for the assembler
 ```
 
 ## Data types (from NASM)
@@ -50,9 +53,9 @@ _z_rsb				2	4	8
 ## Modifiers
 Dollar **$**.
 ```
-$abc		(Default)	byte [abc]
-			word $abc	word [abc]
-					...
+$abc			(Default)		byte [abc]
+				word $abc		word [abc]
+								...
 ```
 
 ## Z words
