@@ -6,8 +6,6 @@
 	}
 </style>
 
-# Z language
-jaja
 
 ## Comments
 ```
