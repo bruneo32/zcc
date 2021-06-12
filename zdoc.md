@@ -34,18 +34,18 @@ LINE
 
 ## Registers
 ```
-			bits	16	32	64
-_z_ax				AX	EAX	RAX
-_z_bx				BX	EBX	RBX
-_z_cx				CX	ECX	RCX
-_z_dx				DX	EDX	RDX
-_z_si				SI	ESI	RSI
-_z_di				DI	EDI	RDI
-_z_sp				SP	ESP	RSP
-_z_bp				BP	EBP	RBP
+			bits	16		32		64
+_z_ax				AX		EAX		RAX
+_z_bx				BX		EBX		RBX
+_z_cx				CX		ECX		RCX
+_z_dx				DX		EDX		RDX
+_z_si				SI		ESI		RSI
+_z_di				DI		EDI		RDI
+_z_sp				SP		ESP		RSP
+_z_bp				BP		EBP		RBP
 
 _z_rs				word	dword	qword
-_z_rsb				2	4	8
+_z_rsb				2		4		8
 ```
 
 ## Modifiers
