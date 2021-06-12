@@ -1,6 +1,9 @@
 <br>
 <style>
   *{tab-size:4;}
+  li{
+   list-style-position: inside !important;
+  }
   header,section#downloads,div.inner>hr{display:none;}
   
   #download-exa{
