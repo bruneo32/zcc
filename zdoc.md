@@ -53,9 +53,10 @@ _z_rsb				2	4	8
 ## Modifiers
 Dollar **$**.
 ```
-$abc			(Default)		byte [abc]
-				word $abc		word [abc]
-								...
+									NASM
+$abc				(Default)		byte [abc]
+					word $abc		word [abc]
+									...
 ```
 
 ## Z words
@@ -118,6 +119,12 @@ Push all the registers
 
 **zpopa**
 Pop all the registers
+
+**zpushf**
+Push all the flags
+
+**zpopf**
+Pop all the flags
 
 **#include**
 Compiles an external Z file, and includes it.
@@ -207,7 +214,7 @@ function printstr(si){
 
 ## OPERATORS
 
-- assing
+assing
 
 	```
 	a  = b		mov   a, b	
@@ -219,7 +226,7 @@ function printstr(si){
 	a--			dec a
 	```
 
-- bitwise
+bitwise
 
 	```
 	a << b		shl a, b
@@ -230,7 +237,7 @@ function printstr(si){
 	a ^ b			xor a, b
 	```
 
-- compare
+compare
 
 	```
 	==
