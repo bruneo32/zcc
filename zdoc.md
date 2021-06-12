@@ -215,60 +215,87 @@ function printstr(si){
 ## OPERATORS
 
 assing
+```
+a  = b		mov   a, b	
+a *= b		movzx a, b
 
-	```
-	a  = b		mov   a, b	
-	a *= b		movzx a, b
-
-	a += b		add a, b
-	a -= b		sub a, b
-	a++			inc a
-	a--			dec a
-	```
+a += b		add a, b
+a -= b		sub a, b
+a++			inc a
+a--			dec a
+```
 
 bitwise
-
-	```
-	a << b		shl a, b
-	a >> b		shr a, b
-	~a			not a
-	a & b			and a, b
-	a | b			or  a, b
-	a ^ b			xor a, b
-	```
+```
+a << b		shl a, b
+a >> b		shr a, b
+~a			not a
+a & b			and a, b
+a | b			or  a, b
+a ^ b			xor a, b
+```
 
 compare
+```
+==
+!=
+<
+>
+<=
+>=
 
-	```
-	==
-	!=
-	<
-	>
-	<=
-	>=
+&&
+||
 
-	&&
-	||
+flagc			Test if CF is ON
+!flagc		Test if CF is OFF
 
-	flagc			Test if CF is ON
-	!flagc		Test if CF is OFF
+flagz			Test if ZF is ON
+!flagz		Test if ZF is OFF
 
-	flagz			Test if ZF is ON
-	!flagz		Test if ZF is OFF
+flags			Test if SF is ON
+!flags		Test if SF is OFF
 
-	flags			Test if SF is ON
-	!flags		Test if SF is OFF
+flagp			Test if PF is ON
+!flagp		Test if PF is OFF
 
-	flagp			Test if PF is ON
-	!flagp		Test if PF is OFF
-
-	flago			Test if OF is ON
-	!flago		Test if OF is OFF
-	```
+flago			Test if OF is ON
+!flago		Test if OF is OFF
+```
 
 
 ## LOGIC BLOCKS
 
-Logic blocks can be in statements:  while, for (second argument), if and elif.
-		
+Logic blocks can be in statements:  **while**, **for** *(second argument)*, **if** and **elif**.
 
+Examples:
+```
+if (ax>0 && bx<=10) {
+	...
+}
+```
+```
+for (cx=0, cx<3, cx++) {
+	...
+}
+```
+```
+if ((cl==0 && ch!=0) || (!flagc && $si>7) && flagz) {
+	...
+} elif ($COLOR == 0x0F) {
+	...
+}
+```
+```
+while(){
+	; Infinite loop
+	
+	...
+	
+	if(cx==0){
+		break
+	}
+	
+	...
+}
+```
